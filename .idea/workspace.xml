@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="506b889d-1c8c-4309-90c8-d910ff7b65ba" name="Changes" comment="">
+    <list default="true" id="506b889d-1c8c-4309-90c8-d910ff7b65ba" name="Changes" comment="Random init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LessenStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LessenStart.java" afterDir="false" />
     </list>
@@ -67,6 +67,14 @@
       <updated>1669563255100</updated>
       <workItem from="1669563256890" duration="652000" />
     </task>
+    <task id="LOCAL-00001" summary="Random init">
+      <created>1669567444785</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669567444785</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,5 +90,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Random init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Random init" />
   </component>
 </project>
