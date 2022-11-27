@@ -10,11 +10,17 @@ public class LessenStart {
         printFood();
         printDesiredSatiety();
         while (satyety<desiredSatiety){
+            if (satyety== desiredSatiety){
+                System.out.println("Кот сыт ");
+                break;
+            }
             printSatiety();
             Food food = getFood();
             changeSatyety(food.getFoodValue());
             printDesiredSatiety();
         }
+        System.out.println("Выш кот перекормлен");
+        printSatiety();
     }
      public static Food getFood(){
          System.out.println("Введите название еды из списка");
