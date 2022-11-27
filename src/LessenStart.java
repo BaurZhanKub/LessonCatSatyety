@@ -4,12 +4,17 @@ import java.util.Scanner;
 public class LessenStart {
     static Scanner sn = new Scanner(System.in);
     static Random rn = new Random();
+    static int satyety = catSatyety(10,100);
+    static int desiredSatiety = catSatyety(10,200);
     public static void main(String[] args) {
         printFood();
-        Food food = getFood();
-        int satyety = catSatyety(10,100);
-        satyety = satyety + food.getFoodValue();
-        System.out.println(satyety);
+        printDesiredSatiety();
+        while (satyety<desiredSatiety){
+            printSatiety();
+            Food food = getFood();
+            changeSatyety(food.getFoodValue());
+            printDesiredSatiety();
+        }
     }
      public static Food getFood(){
          System.out.println("Введите название еды из списка");
@@ -24,12 +29,21 @@ public class LessenStart {
      }
      public static void printFood(){
          for (Food food : Food.values()) {
-             System.out.printf("%s, %s",food.name(),food.getFoodValue());
+             System.out.printf("%s %s, ",food.name(),food.getFoodValue());
          }
          System.out.println();
      }
      public static int catSatyety(int min, int max){
-        int  rand = Math.max(min,max)+min;
-       return rand;
+         max -= min;
+         return (int) (Math.random() * ++max) + min;
      }
+     public static void changeSatyety (int foodSatyety){
+        satyety = satyety + foodSatyety;
+     }
+     public static void printSatiety(){
+         System.out.println("Уровень сытости " + satyety);
+     }
+    public static void printDesiredSatiety() {
+        System.out.println("Желаемый уровень сытости " + desiredSatiety);
+    }
 }
