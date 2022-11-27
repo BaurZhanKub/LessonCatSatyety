@@ -1,13 +1,15 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class LessenStart {
     static Scanner sn = new Scanner(System.in);
+    static Random rn = new Random();
     public static void main(String[] args) {
-        int catSatyety = 0;
-
+        printFood();
         Food food = getFood();
-        catSatyety = catSatyety + food.getFoodValue();
-        System.out.println(catSatyety);
+        int satyety = catSatyety(10,100);
+        satyety = satyety + food.getFoodValue();
+        System.out.println(satyety);
     }
      public static Food getFood(){
          System.out.println("Введите название еды из списка");
@@ -19,5 +21,15 @@ public class LessenStart {
          }
          System.out.println("Вы ввели неверные данные!");
          return getFood();
+     }
+     public static void printFood(){
+         for (Food food : Food.values()) {
+             System.out.printf("%s, %s",food.name(),food.getFoodValue());
+         }
+         System.out.println();
+     }
+     public static int catSatyety(int min, int max){
+        int  rand = Math.max(min,max)+min;
+       return rand;
      }
 }
