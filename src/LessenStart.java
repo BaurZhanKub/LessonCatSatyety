@@ -25,7 +25,7 @@ public class LessenStart {
          //         System.out.println("Вы ввели неверные данные!");
          //         return getFood();
          //     }//
-         int select = rn.nextInt(4);
+         int select = rn.nextInt(Food.values().length);
          Food food = Food.values()[select];
          System.out.println("Выбор:" + food.name() +"|"+ food.getFoodValue());
          return food;
