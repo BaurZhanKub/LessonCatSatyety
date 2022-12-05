@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="506b889d-1c8c-4309-90c8-d910ff7b65ba" name="Changes" comment="Interfise init">
+    <list default="true" id="506b889d-1c8c-4309-90c8-d910ff7b65ba" name="Changes" comment="user interfeis final">
+      <change afterPath="$PROJECT_DIR$/src/CatState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_2022_22_21_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_11_2022_22_21__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LessenStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LessenStart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -53,6 +63,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.LessenStart" />
+        <item itemvalue="Application.LessenStart" />
+        <item itemvalue="Application.LessenStart" />
+        <item itemvalue="Application.LessenStart" />
+        <item itemvalue="Application.LessenStart" />
       </list>
     </recent_temporary>
   </component>
@@ -65,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669563255100</updated>
       <workItem from="1669563256890" duration="652000" />
+      <workItem from="1670253144741" duration="3148000" />
     </task>
     <task id="LOCAL-00001" summary="Random init">
       <created>1669567444785</created>

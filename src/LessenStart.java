@@ -4,35 +4,48 @@ import java.util.Scanner;
 public class LessenStart {
     static Scanner sn = new Scanner(System.in);
     static Random rn = new Random();
-    static int satyety = catSatyety(10,100);
-    static int desiredSatiety = catSatyety(10,200);
+    static int satyety = catSatyety(0,10);
+    static int desiredSatiety = catSatyety(0,10);
     public static void main(String[] args) {
         printFood();
         printDesiredSatiety();
-        while (satyety<desiredSatiety){
-            if (satyety== desiredSatiety){
-                System.out.println("Кот сыт ");
-                break;
-            }
-            printSatiety();
-            Food food = getFood();
-            changeSatyety(food.getFoodValue());
-            printDesiredSatiety();
-        }
-        System.out.println("Выш кот перекормлен");
         printSatiety();
+        CatState state = feedCat();
+        printState(state);
+
     }
      public static Food getFood(){
-         System.out.println("Введите название еды из списка");
-         String input = sn.nextLine().toUpperCase();
-         for (Food food : Food.values()) {
-             if(food.name().equals(input)){
-                 return food;
-             }
-         }
-         System.out.println("Вы ввели неверные данные!");
-         return getFood();
+       // System.out.println("Введите название еды из списка");
+         //         String input = sn.nextLine().toUpperCase();
+         //         for (Food food : Food.values()) {
+         //             if(food.name().equals(input)){
+         //                 return food;
+         //             }
+         //         }
+         //         System.out.println("Вы ввели неверные данные!");
+         //         return getFood();
+         //     }//
+         int select = rn.nextInt(4);
+         Food food = Food.values()[select];
+         System.out.println("Выбор:" + food.name() +"|"+ food.getFoodValue());
+         return food;
      }
+
+     public static CatState feedCat(){
+        if (satyety>desiredSatiety){
+            return CatState.BOSSE;
+        }
+        while (satyety<desiredSatiety) {
+            Food food = getFood();
+            changeSatyety(food.getFoodValue());
+            printSatiety();
+         }
+         if (satyety == desiredSatiety){
+             return CatState.FED;
+         }
+         return CatState.OVERFED;
+     }
+
      public static void printFood(){
          for (Food food : Food.values()) {
              System.out.printf("%s %s, ",food.name(),food.getFoodValue());
@@ -51,5 +64,18 @@ public class LessenStart {
      }
     public static void printDesiredSatiety() {
         System.out.println("Желаемый уровень сытости " + desiredSatiety);
+    }
+    public static void printState (CatState state){
+        switch (state){
+            case FED:
+                System.out.println("Кот Сыт");
+                break;
+            case BOSSE:
+                System.out.println("Коту пора сесть на диету");
+                break;
+            case OVERFED:
+                System.out.println("Кот перекормлен");
+                break;
+        }
     }
 }
